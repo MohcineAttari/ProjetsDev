@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0;
+    color: #333;
+}
+header {
+    background: #228B22;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: url('images/eco-background.jpg') no-repeat center center/cover;
+    color: white;
+}
+.hero h1 {
+    font-size: 36px;
+}
+form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+input, button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background: #8B4513;
+    color: white;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #A0522D;
+    color: white;
+    margin-top: 20px;
+}
