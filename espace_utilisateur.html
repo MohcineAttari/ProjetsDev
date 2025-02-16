@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRide - Connexion</title>
+    <title>EcoRide - Espace Utilisateur</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Design+System:wght@400;700&display=swap">
 </head>
 <body>
     <header>
-        <h1>Connexion à EcoRide</h1>
+        <h1>EcoRide - Espace Utilisateur</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="covoiturages.html">Covoiturages</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
                 <li><a href="contact.html">Nous Contacter</a></li>
+                <li><a href="espace_utilisateur.html">Espace Utilisateur</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="connexion">
-            <h2>Se connecter</h2>
-            <form>
-                <input type="email" placeholder="Adresse e-mail" required>
-                <input type="password" placeholder="Mot de passe" required>
-                <button type="submit">Connexion</button>
-            </form>
-            <p><a href="inscription.html">Créer un nouveau compte</a></p>
-            <p><a href="recuperation_mdp.html">Mot de passe oublié ?</a></p>
+        <section id="espaceUtilisateur">
+            <h2>Votre Espace</h2>
+            <div id="infosUtilisateur">
+                <p>Pseudo : <span id="pseudoUtilisateur"></span></p>
+                <p>Crédits restants : <span id="creditsUtilisateur"></span></p>
+            </div>
         </section>
     </main>
     <footer>
         <p>Contactez-nous : <a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></p>
         <p><a href="mentions_legales.html">Mentions légales</a></p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

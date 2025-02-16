@@ -1,125 +1,347 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5dc; /* Marron très clair */
-    color: #000000; /* Noir */
+/* Réinitialiser les marges et les paddings par défaut */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Assurer que le html et le body prennent toute la hauteur */
+    overflow: hidden; /* Empêcher les barres de défilement si l'image est plus grande */
+}
+
+body {
+    font-family: 'Design System', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #e0f7ea; /* Couleur de fond écologique par défaut */
+    color: #2e7d32; /* Couleur du texte principal */
+}
+
+body.accueil {
+    background-image: url('images/your_background_image.jpg'); /* Chemin de votre image de fond */
+    background-size: cover; /* Assure que l'image couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    min-height: 100vh; /* Assure que l'image couvre au moins la hauteur de la fenêtre */
 }
 
 header {
-    background-color: #66cc66; /* Vert clair */
-    color: white;
-    padding: 20px;
+    background-color: #a5d6a7; /* Couleur de l'entête */
+    padding: 40px;
     text-align: center;
+    height: 150px; /* Définit une hauteur spécifique */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Augmente la taille de la police pour le titre */
+    color: #fff;
 }
 
 nav ul {
-    list-style: none;
-    background-color: #66cc66; /* Vert clair */
-    padding: 0;
+    list-style-type: none;
     margin: 0;
-    display: flex;
-    justify-content: space-around;
+    padding: 0;
+    display: flex; /* Utilise flexbox pour le menu */
+    justify-content: center; /* Centre les éléments horizontalement */
 }
 
 nav ul li {
-    margin: 0;
+    flex: 1; /* Chaque élément prend une longueur égale */
+    margin: 0 10px; /* Ajoute un espace entre les éléments */
 }
 
 nav ul li a {
-    color: white;
-    padding: 15px 30px;
     display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
+    background-color: #4caf50;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background-color: #339933; /* Vert plus foncé pour le survol */
+    background-color: #388e3c; /* Couleur au survol */
 }
 
+
 main {
+    flex: 1; /* Permet au main de prendre toute la hauteur disponible */
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
 
-#presentation {
+#rechercheAccueil {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1;
+    max-width: 400px; /* Limite la largeur pour un meilleur alignement */
+    text-align: left;
+}
+
+#rechercheAccueil h2 {
+    margin-top: 0;
+}
+
+#rechercheAccueil form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+}
+
+#rechercheAccueil input, #rechercheAccueil button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#rechercheAccueil button {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#rechercheAccueil button:hover {
+    background-color: #43a047;
+}
+
+#presentation {
+    margin: 20px;
+    flex: 1;
+    text-align: center; /* Centrer le texte et l'image */
 }
 
 #presentation img {
     max-width: 100%;
     height: auto;
-    width: 300px; /* Largeur fixe de l'image */
-    border-radius: 10px; /* Coins arrondis pour une meilleure apparence */
+    border-radius: 10px;
+}
+
+#rechercheCovoiturages {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1;
+    max-width: 400px; /* Limite la largeur pour un meilleur alignement */
+    text-align: left;
+}
+
+#rechercheCovoiturages h2 {
+    margin-top: 0;
+}
+
+#rechercheCovoiturages form {
+    display: flex;
+    flex-direction: column;
+}
+
+#rechercheCovoiturages input, #rechercheCovoiturages button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#rechercheCovoiturages button {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#rechercheCovoiturages button:hover {
+    background-color: #43a047;
+}
+
+#connexion {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1;
+    max-width: 400px; /* Limite la largeur pour un meilleur alignement */
+    text-align: left;
+}
+
+#connexion h2 {
+    margin-top: 0;
+}
+
+#connexion form {
+    display: flex;
+    flex-direction: column;
+}
+
+#connexion input, #connexion button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#connexion button {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#connexion button:hover {
+    background-color: #43a047;
+}
+
+#contact {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1;
+    max-width: 400px; /* Limite la largeur pour un meilleur alignement */
+    text-align: left;
+}
+
+#contact h2 {
+    margin-top: 0;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact textarea, #contact button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#contact button {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #43a047;
+}
+
+#info-contact {
     margin-top: 20px;
 }
 
-#recherche {
-    margin-top: -180px; /* Ajustez cette valeur selon vos besoins */
+#detailCovoiturage {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: left;
 }
 
-#recherche form {
-    display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: flex-start; /* Aligne les éléments sur le côté gauche */
-    gap: 10px; /* Espace entre les éléments */
+#detailCovoiturage h2 {
+    margin-top: 0;
+}
+
+#infoCovoiturage, #avisCovoiturage {
     margin-bottom: 20px;
 }
 
-#recherche form input, #recherche form button {
-    padding: 10px;
-    margin: 5px 0; /* Supprime les marges latérales pour les aligner à gauche */
-    border: 1px solid #ccc; /* Gris clair */
-    border-radius: 5px;
-    width: 80%; /* Largeur de chaque champ et bouton */
-    max-width: 300px;
+#infoCovoiturage img {
+    max-width: 100px;
+    border-radius: 50%;
 }
 
-
-#recherche form button:hover {
-    background-color: #e88f37; /* Couleur différente au survol */
+#infoCovoiturage p, #avisCovoiturage p {
+    margin: 10px 0;
 }
 
-#resultats1 {
-    float: right;
-    padding-bottom: -200px;
-
-
-}
-
-#recherche1 form {
-    display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: flex-start; /* Aligne les éléments sur le côté gauche */
-    gap: 10px; /* Espace entre les éléments */
-    margin-bottom: -150px;
+#avisCovoiturage h3 {
     margin-top: 20px;
 }
- #recherche1 form input {
-    padding: 10px;
-    margin: 5px 0; /* Supprime les marges latérales pour les aligner à gauche */
-    border: 1px solid #ccc; /* Gris clair */
-    border-radius: 5px;
-    width: 80%; /* Largeur de chaque champ et bouton */
-    max-width: 300px; 
+
+#detailCovoiturage button {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-#connexion { 
+#detailCovoiturage button:hover {
+    background-color: #43a047;
+}
+
+#inscription {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1;
+    max-width: 400px; /* Limite la largeur pour un meilleur alignement */
+    text-align: left;
+}
+
+#inscription h2 {
+    margin-top: 0;
+}
+
+#inscription form {
     display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: flex-start; /* Aligne les éléments sur le côté gauche */
-    gap: 10px; /* Espace entre les éléments */
-    margin-bottom: -150px;
-    margin-top: 20px;}
+    flex-direction: column;
+}
+
+#inscription input, #inscription button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#inscription button {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#inscription button:hover {
+    background-color: #43a047;
+}
+
 
 footer {
-    background-color: #66cc66; /* Vert clair */
-    color: white;
-    padding: 10px;
+    background-color: #a5d6a7;
+    padding: 10px 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
+    color: #fff;
 }
+
+footer a {
+    color: #004d40;
+    text-decoration: none;
+}
+
+#espaceUtilisateur {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: left;
+}
+
+#espaceUtilisateur h2 {
+    margin-top: 0;
+}
+
+#infosUtilisateur p {
+    margin: 10px 0;
+}
+
