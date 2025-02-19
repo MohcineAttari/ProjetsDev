@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRide - Espace Utilisateur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Design+System:wght@400;700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>EcoRide - Espace Utilisateur</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="covoiturages.html">Covoiturages</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="contact.html">Nous Contacter</a></li>
+                <li><a href="espace_utilisateur.html">Espace Utilisateur</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="espaceUtilisateur">
+            <h2>Votre Espace</h2>
+            <div id="infosUtilisateur">
+                <p>Pseudo : <span id="pseudoUtilisateur"></span></p>
+                <p>Crédits restants : <span id="creditsUtilisateur"></span></p>
+            </div>
+
+            <div>
+            <h3>Saisir un voyage</h3>
+                <form id="voyageForm">
+                    <input type="text" id="adresseDepart" placeholder="Adresse de départ" required>
+                    <input type="text" id="adresseArrivee" placeholder="Adresse d'arrivée" required>
+                    <input type="date" id="dateVoyage" required>
+                    <input type="time" id="heureDepart" required>
+                    <input type="time" id="heureArrivee" required>
+                    <input type="number" id="prixVoyage" placeholder="Prix par personne" required>
+                    <input type="number" id="placesDisponibles" placeholder="Nombre de places disponibles" required>
+                    <button type="submit">Ajouter le voyage</button>
+                </form>
+            </div>
+            <div id="saisirVoyage">
+                <h3>Saisir un voyage</h3>
+                <form id="voyageForm">
+                    <input type="text" id="adresseDepart" placeholder="Adresse de départ" required>
+                    <input type="text" id="adresseArrivee" placeholder="Adresse d'arrivée" required>
+                    <input type="date" id="dateVoyage" required>
+                    <input type="time" id="heureDepart" required>
+                    <input type="time" id="heureArrivee" required>
+                    <input type="number" id="prixVoyage" placeholder="Prix par personne" required>
+                    <input type="number" id="placesDisponibles" placeholder="Nombre de places disponibles" required>
+                    <button type="submit">Ajouter le voyage</button>
+                </form>
+            </div>
+
+            <div id="historiqueCovoiturages">
+                <h3>Historique des covoiturages</h3>
+                <div id="listeHistorique">
+                    <!-- Liste de l'historique des covoiturages -->
+                </div>
+            </div>
+
+            <div id="gestionCovoiturages">
+                <h3>Vos Covoiturages</h3>
+                <button id="ajouterCovoiturageButton">Ajouter un covoiturage</button>
+                <div id="listeCovoiturages">
+                    <!-- Liste des covoiturages ajoutés -->
+                </div>
+            </div>
+            <div id="demarrerCovoiturage">
+                <h3>Démarrer un covoiturage</h3>
+                <div id="listeDemarrerCovoiturages">
+                    <!-- Liste des covoiturages avec bouton démarrer -->
+                </div>
+            </div>
+            <div id="arreterCovoiturage">
+                <h3>Arrêter un covoiturage</h3>
+                <div id="listeArreterCovoiturages">
+                    <!-- Liste des covoiturages avec bouton arrêter -->
+                </div>
+            </div>
+            
+            
+            
+
+        </section>
+    </main>
+    <footer>
+        <p>Contactez-nous : <a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></p>
+        <p><a href="mentions_legales.html">Mentions légales</a></p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
